@@ -29,11 +29,20 @@ class Viewer
     # should return all of the viewers
   end
 
+  # class finder methods
+
   def self.find_by_name(fullname)
     self.all.find {|name| name == fullname}
     # given a string of a full name, returns the first
       # customer whose full name matches
   end
+
+  # Viewer.find_by_name('Jim', 'Mellancamp')
+  # Viewer.find_by_name('Phil','Backslash')
+  # Viewer.find_by_name('Paul','McCartney')
+  # Viewer.find_by_name('Ian','Candy')
+  # Viewer.find_by_name('Dave','Mieloch')
+  # Viewer.find_by_name('Mr.','McGoo')
 
   # def self.create_rating(score, movie) # didn't get to
   #   Rating.new(score, movie) # creates new rating
